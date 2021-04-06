@@ -88,3 +88,9 @@ sync manner for this one case of the exit handler.
 ### Try blocking on a long-running `fetch` instead of a timeout and see if it helps
 
 Maybe with that, the process will actually service the pre-death hooks.
+
+### Try using the hack with synchronous process invocation
+
+`curl` could be used to send exit/signal telemetry, a different process could be
+spawned with CLI arguments based on the dying process' data to handle the data
+however would be needed.
